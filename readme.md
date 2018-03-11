@@ -8,13 +8,13 @@ Movie info -> Get information about a movie (above a 5 IMDB rating)
 			    Director (Name) 
 Compare with IMDB -> Test how close you can rate a movie with its actual IMDB rating
 
-List of routes with templates
-*http://localhost:5000/ -> base.html
-*http://localhost:5000/movie -> form.html, movieresult.html (Form w/Post method to same page)
-*http://localhost:5000/movieform -> movieform.html
-*http://localhost:5000/movieinfo -> movieinfo.html
-*http://localhost:5000/moviessearched -> moviessearched.html
-*http://localhost:5000/directorssearched -> directorssearched.html
+###List of routes with templates
+-http://localhost:5000/ -> base.html
+-http://localhost:5000/movie -> form.html, movieresult.html (Form w/Post method to same page)
+-http://localhost:5000/movieform -> movieform.html
+-http://localhost:5000/movieinfo -> movieinfo.html
+-http://localhost:5000/moviessearched -> moviessearched.html
+-http://localhost:5000/directorssearched -> directorssearched.html
 
 Code Requirements
 Ensure that the SI364midterm.py file has all the setup (app.config values, import statements, code to run the app if that file is run, etc) necessary to run the Flask application, and the application runs correctly on http://localhost:5000 (and the other routes you set up)
