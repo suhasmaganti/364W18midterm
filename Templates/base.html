@@ -1,0 +1,26 @@
+{#
+{% block content1 %}
+
+<form method="POST">
+    {{ form.name.label() }}{{ form.name() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+
+
+{% endblock %}
+#}
+
+<h1> SI364 Midterm Application </h1>
+
+{% block footer %}
+<h3>Links</h3>
+<ul>
+	<li><a href="http://localhost:5000/home">Home Page</a></li>
+	<li><a href="http://localhost:5000/movieform">Get movie Info</a></li>
+	<li><a href="http://localhost:5000/movie">Compare yourself with IMDB</a></li>
+	<li><a href="http://localhost:5000/moviessearched">List of movies searched</a></li>
+	<li><a href="http://localhost:5000/directorssearched">List of directors searched</a></li><br>
+
+</ul>
+{% endblock %}

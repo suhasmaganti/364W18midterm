@@ -1,0 +1,23 @@
+
+
+<h2> Compare yourself with IMDB </h2>
+
+{% block content1 %}
+
+<form action="{{ url_for('movie') }}" method="POST">
+    {{ form.movie.label() }} {{ form.movie() }}<br>
+    {{ form.rating.label() }} {{ form.rating() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+
+{% endblock %}
+
+{% for dc in get_flashed_messages() %}
+<b>Fields that were a problem:</b><br><br>
+    {% for key in dc %}
+        * <b>{{ key }}</b> - <i> {{ dc[key][0] }}</i> <br>
+    {% endfor %}
+{% endfor %}
+
+{% extends "base.html" %}

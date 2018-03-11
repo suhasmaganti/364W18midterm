@@ -1,0 +1,29 @@
+
+{% block movie %}
+<!--Jinja conditional: Test for a low rating movie
+    Example: Anaconda, rating = 4.7 < 5 
+    This will take you back to the form and make you enter another movie)-->
+{% if imdbRating < 5 %}
+    <h1>Sorry!</h1>
+    <h2>The movie has too low of a rating.
+    Please <a href="http://localhost:5000/movieform">go back</a> and enter a better movie!</h2>
+{% else %}
+
+<!--Jinja for loop: Get information of a good movie
+    Example: The Dark Knight-->
+{% for r in objects %}
+    <h3>Title: {{ r['Title'] }}</h3>
+    <h3>Year: {{ r['Year'] }}</h3>
+    <h3>Director: {{ r['Director'] }}</h3>
+    <h3>Actors: {{ r['Actors'] }}</h3>
+    <h3>IMDb Rating: {{ r['imdbRating'] }}</h3>
+    <h3>Plot:</h3> 
+    <p>{{ r['Plot'] }}</p>
+    <img src = {{ r['Poster'] }}>
+{% endfor %}
+
+{% endif %}
+<h2><a href="http://localhost:5000/movieform">Try another movie!</a></h2>
+{% endblock %}
+
+{% extends "base.html" %}

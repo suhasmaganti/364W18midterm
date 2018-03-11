@@ -1,0 +1,14 @@
+
+{% block content %}
+
+<h1> List of Directors searched </h1>
+
+<ul>
+{% for dir in directors %}
+    <li>{{dir.full_name}}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
+
+{% extends 'base.html' %}

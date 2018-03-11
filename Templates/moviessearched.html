@@ -1,0 +1,14 @@
+
+{% block content %}
+
+<h1>List of Movies searched</h1>
+
+<ul>
+{% for m in movies %}
+    <li>{{m.name}}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
+
+{% extends "base.html" %}
